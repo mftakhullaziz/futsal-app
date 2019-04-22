@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "117201113822",
+    "firebase_url": "https://futsal-go.firebaseio.com",
+    "project_id": "futsal-go",
+    "storage_bucket": "futsal-go.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:117201113822:android:2b4f598b1593f908",
+        "android_client_info": {
+          "package_name": "com.example.futsalgo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "117201113822-m4err4vbnkdt8jvc1te0fhcqk0ij87co.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.futsalgo",
+            "certificate_hash": "229d459b8395e121ef7e73423a468f50bf385a0c"
+          }
+        },
+        {
+          "client_id": "117201113822-1rng59dc6gpgecc2l074j65j4n3pik7b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQdBnzp_56rBDBr2X-cRQYnqgkqqjfW44"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "117201113822-1rng59dc6gpgecc2l074j65j4n3pik7b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

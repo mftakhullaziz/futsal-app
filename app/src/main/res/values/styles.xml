@@ -1,0 +1,126 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="edit_text_style">
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:background">@drawable/edit_text_bg</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ems">10</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!--Start button style-->
+    <style name="button_style_bg">
+        <item name="android:background">@drawable/button_style</item>
+        <item name="android:textColor">#FDFDFE</item>
+        <item name="android:layout_margin">15dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <!--Start button style-->
+    <style name="button_style_bg1">
+        <item name="android:background">@drawable/button_style2</item>
+        <item name="android:textColor">#FDFDFE</item>
+        <item name="android:layout_margin">15dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+    <!--End button style-->
+
+    <style name="text_view_style">
+        <item name="android:gravity">left</item>
+        <item name="android:textColor">#FDFDFE</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="checkbox">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">#FDFDFE</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!--Start style dialog progress-->
+    <style name="animate">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_marginTop">470dp</item>
+    </style>
+
+    <style name="dialog_text">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:text">tunggu sebentar...</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">#1B3632</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="dialog_text_splash">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:text">Selamat datang di futsal go</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:color">#FF1B3632</item>
+        <item name="android:fontStyle">normal</item>
+    </style>
+    <!--End style dialog progress-->
+
+    <style name="bg">
+        <item name="android:background">@drawable/material_background</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="NavigationDrawerStyle" parent="AppTheme">
+        <item name="android:textSize">18sp</item><!-- text size in menu-->
+        <item name="android:fontWeight">2</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <!-- item size in menu-->
+        <item name="android:listPreferredItemHeightSmall">40dp</item>
+        <item name="listPreferredItemHeightSmall">70dp</item>
+        <item name="listPreferredItemPaddingLeft">70dp</item>
+
+    </style>
+
+
+    <!--<style name="NavigationTheme" parent="AppTheme">-->
+        <!---->
+        <!--&lt;!&ndash; item padding left in menu&ndash;&gt;-->
+        <!--<item name="android:listPreferredItemPaddingStart">80dp</item>-->
+        <!--<item name="listPreferredItemPaddingLeft">80dp</item>-->
+    <!--</style>-->
+
+
+
+
+</resources>

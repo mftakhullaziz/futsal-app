@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/unsplash"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    tools:context=".welcome">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/view1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dengan futsal go"
+        android:fontFamily="@font/montserrat"
+        android:layout_marginTop="180dp"
+        android:textColor="#009688"
+        android:textSize="40sp"/>
+
+    <TextView
+        android:id="@+id/view2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="Booking Lapangan Futsal Kapan Saja"
+        android:textColor="#FFF"
+        android:textSize="56sp"/>
+
+    <Button
+        android:id="@+id/Masuk_login"
+        style="@style/button_style_bg"
+        android:fontFamily="@font/open_sans"
+        android:onClick="masuk_login"
+        android:layout_height="60dp"
+        android:textSize="23sp"
+        android:text="Masuk" />
+
+     <Button
+         android:id="@+id/Masuk_daftar"
+         style="@style/button_style_bg1"
+         android:fontFamily="@font/open_sans"
+         android:onClick="masuk_daftar"
+         android:layout_height="60dp"
+         android:textSize="23sp"
+         android:text="Daftar Akun" />
+
+    </LinearLayout>
+
+</RelativeLayout>
