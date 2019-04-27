@@ -73,6 +73,7 @@
             android:gravity="center"
             android:onClick="lupaPassword"
             android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
             android:textSize="13sp"
             android:text="Lupa Password ?" />
 
@@ -95,7 +96,8 @@
             android:fontFamily="@font/montserrat"
             android:paddingBottom="20dp"
             android:text="Belum Punya Akun ? Buat Akun"
-            android:background="?attr/selectableItemBackgroundBorderless"/>
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"/>
 
         <TextView
             android:id="@+id/kembali"
@@ -107,7 +109,8 @@
             android:fontFamily="@font/montserrat"
             android:paddingBottom="20dp"
             android:text="Kembali"
-            android:background="?attr/selectableItemBackgroundBorderless"/>
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"/>
 
     </LinearLayout>
 
