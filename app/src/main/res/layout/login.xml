@@ -71,7 +71,7 @@
             android:id="@+id/LupaPasswd"
             style="@style/text_view_style"
             android:gravity="center"
-            android:onClick="lupaPassword"
+
             android:background="?attr/selectableItemBackgroundBorderless"
             android:clickable="true"
             android:textSize="13sp"
@@ -83,7 +83,7 @@
             style="@style/button_style_bg"
             android:textSize="20sp"
             android:fontFamily="@font/montserrat"
-            android:onClick="masuk"
+
             android:text="Masuk" />
 
 
@@ -92,7 +92,7 @@
             style="@style/text_view_style"
             android:gravity="center"
             android:textSize="13dp"
-            android:onClick="toRegister"
+
             android:fontFamily="@font/montserrat"
             android:paddingBottom="20dp"
             android:text="Belum Punya Akun ? Buat Akun"
@@ -104,7 +104,7 @@
             style="@style/text_view_style"
             android:gravity="center"
             android:layout_marginTop="20dp"
-            android:onClick="kembali"
+
             android:textSize="12dp"
             android:fontFamily="@font/montserrat"
             android:paddingBottom="20dp"
