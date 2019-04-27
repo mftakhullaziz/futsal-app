@@ -57,9 +57,9 @@ public class login_class extends AppCompatActivity implements View.OnClickListen
 
         inputEmail = (EditText) findViewById(R.id.email);
         inputPassword = (EditText) findViewById(R.id.password);
-        btnSignup = (TextView) findViewById(R.id.LupaPasswd);
         btnLogin = (Button) findViewById(R.id.Masuk);
-        btnReset = (TextView) findViewById(R.id.toRegister);
+        btnReset = (TextView) findViewById(R.id.LupaPasswd);
+        btnSignup = (TextView) findViewById(R.id.toRegister);
 
         btnSignup.setOnClickListener(this);
         btnReset.setOnClickListener(this);
