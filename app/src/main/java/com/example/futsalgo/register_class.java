@@ -30,12 +30,17 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
 
 public class register_class extends AppCompatActivity {
@@ -55,6 +60,8 @@ public class register_class extends AppCompatActivity {
     private Button btnSignUp;
     private ProgressDialog mProgress;
     private DatabaseReference dbRef;
+
+    String ProfileUpdate;
 
     ImageView imgUserPhoto;
     static int PReqCode = 1;
@@ -87,8 +94,10 @@ public class register_class extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 mProgress.setMessage("Mendaftar ...");
+                nama = inputNama.getText().toString().trim();
                 email = inputEmail.getText().toString().trim();
                 password = inputPassword.getText().toString().trim();
+                telepon = inputNoTelepon.getText().toString().trim();
 
                 if (email.isEmpty()) {
                     inputEmail.setError("Wajib diisi");
@@ -96,11 +105,11 @@ public class register_class extends AppCompatActivity {
                 if (password.isEmpty()) {
                     inputPassword.setError("Wajib diisi");
                 }
-
                 if (password.length() < 6) {
                     Toast.makeText(getApplicationContext(), "Password terlalu pendek, masukkan minimal 6 karakter!", Toast.LENGTH_SHORT).show();
                     return;
                 }
+
 
                 mProgress.show();
 
@@ -113,7 +122,9 @@ public class register_class extends AppCompatActivity {
                             mProgress.dismiss();
                         } else {
                             startActivity(new Intent(register_class.this, login_class.class));
-                            simpanData();
+                            //simpanData();
+                            UpdateUserInfo(nama, pickimgURI, auth.getCurrentUser());
+
                             Toast.makeText(register_class.this, "Daftar Berhasil", Toast.LENGTH_SHORT).show();
                             mProgress.dismiss();
                             finish();
@@ -139,6 +150,39 @@ public class register_class extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private void UpdateUserInfo(final String nama, Uri pickimgURI, final FirebaseUser currentUser) {
+        StorageReference mstorage = FirebaseStorage.getInstance().getReference().child("users_photo");
+        final StorageReference imgfilePath = mstorage.child(pickimgURI.getLastPathSegment());
+        imgfilePath.putFile(pickimgURI).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                imgfilePath.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                    @Override
+                    public void onSuccess(Uri uri) {
+                        UserProfileChangeRequest ProfileUpdate = new UserProfileChangeRequest.Builder()
+                                .setDisplayName(nama)
+                                .setPhotoUri(uri)
+                                .build();
+
+                        currentUser.updateProfile(ProfileUpdate).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if(task.isSuccessful()){
+                                    showMessage("Daftar Berhasil");
+                                }
+                            }
+                        });
+                    }
+                });
+
+            }
+        });
+    }
+
+    private void showMessage(String message) {
+        Toast.makeText(getApplicationContext(),message,Toast.LENGTH_LONG).show();
     }
 
 

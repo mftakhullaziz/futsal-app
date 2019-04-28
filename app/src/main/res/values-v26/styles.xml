@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="dialog_text_splash">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:text">Selamat datang di futsal go</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:color">#FF1B3632</item>
+        <item name="android:fontStyle">normal</item>
+    </style>
+
+    <style name="NavigationDrawerStyle" parent="AppTheme">
+        <item name="android:textSize">18sp</item><!-- text size in menu-->
+        <item name="android:fontWeight">2</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <!-- item size in menu-->
+        <item name="android:listPreferredItemHeightSmall">40dp</item>
+        <item name="listPreferredItemHeightSmall">70dp</item>
+        <item name="listPreferredItemPaddingLeft">70dp</item>
+
+    </style>
+</resources>
