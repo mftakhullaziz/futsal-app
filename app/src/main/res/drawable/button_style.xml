@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
-    android:color="?android:attr/colorControlHighlight">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:color="?android:attr/colorControlHighlight"
+    tools:ignore="NewApi">
     <item android:drawable="@drawable/shape_bg" />
 </ripple>
-<!--<?xml version="1.0" encoding="utf-8"?>-->
-<!--<selector xmlns:android="http://schemas.android.com/apk/res/android">-->
-    <!--<item>-->
-        <!--<shape android:shape="rectangle">-->
-            <!--<corners android:radius="50dp"></corners>-->
-            <!--<solid android:color="#FDFDFE"></solid>-->
-            <!--<size android:height="40dp"></size>-->
-            <!--<gradient android:startColor="#4BFA8C" android:endColor="#56C5ED"></gradient>-->
-        <!--</shape>-->
-    <!--</item>-->
-<!--</selector>-->

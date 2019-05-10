@@ -12,21 +12,28 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo_aplikasi"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/logo_aplikasi"
+        android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".welcome" />
+        <activity android:name=".RekeningTransferActivity"></activity>
+        <activity android:name=".BuatPesananActivity" />
+        <activity android:name=".PilihTempatFutsalActivity" />
+        <activity android:name=".MenuTempatFutsal.DetailTempatFutsalActivity" />
+        <activity android:name=".MenuBeranda.ViewImageActivity" />
+        <activity android:name=".DialogActivity" />
+        <activity android:name=".Activities.UbahProfilActivity" />
+        <activity android:name=".WelcomeActivity" />
         <activity
-            android:name=".nav_drawer_class"
-            android:label="@string/title_activity_nav_drawer_class"
+            android:name=".NavDrawerActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".login_class" />
-        <activity android:name=".register_class" />
-        <activity android:name=".forgot_passwd_class" />
+        <activity android:name=".Authentikasi.LoginActivity" />
+        <activity android:name=".Authentikasi.RegisterActivity" />
+        <activity android:name=".Authentikasi.ForgotPasswordActivity" />
         <activity
-            android:name=".splash_screen_class"
+            android:name=".SplashSreenActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
