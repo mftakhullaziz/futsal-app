@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loginclass"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lapangan"
+    tools:context=".Authentikasi.LoginActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_layout2"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                app:srcCompat="@drawable/logo_aplikasi_y" />
+
+            <TextView
+                android:id="@+id/SilahkanMasuk"
+                style="@style/text_view_style"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/open_sans"
+                android:gravity="center"
+                android:text="Hi User Please Login First !"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/email"
+                style="@style/edit_text_style"
+                android:drawableStart="@drawable/ic_email"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawablePadding="10dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/open_sans"
+                android:hint="email"
+                android:inputType="textEmailAddress"
+                android:textColor="#727272" />
+
+            <EditText
+                android:id="@+id/password"
+                style="@style/edit_text_style"
+                android:drawableStart="@drawable/ic_password"
+                android:drawableLeft="@drawable/ic_password"
+                android:drawablePadding="10dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/open_sans"
+                android:hint="password"
+                android:inputType="textPassword"
+                android:textColor="#727272" />
+
+            <!--<CheckBox-->
+            <!--android:id="@+id/ch_rememberme"-->
+            <!--style="@style/checkbox"-->
+            <!--android:text="Checklist untuk ingat email dan password" />-->
+
+            <TextView
+                android:id="@+id/LupaPasswd"
+                style="@style/text_view_style"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="0dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="Forgot Password ?"
+                android:textSize="13sp" />
+
+
+            <Button
+                android:id="@+id/Masuk"
+                style="@style/button_style_bg"
+                android:fontFamily="@font/open_sans"
+                android:text="Login"
+                android:textSize="20sp" />
+
+
+            <TextView
+                android:id="@+id/toRegister"
+                style="@style/text_view_style"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:shadowRadius="50"
+                android:focusable="true"
+                android:fontFamily="@font/open_sans"
+                android:gravity="center"
+                android:text="Not Have Account ? Create Account"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/kembali"
+                style="@style/text_view_style"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:focusable="true"
+                android:shadowRadius="50"
+                android:onClick="kembali"
+                android:clickable="true"
+                android:fontFamily="@font/open_sans"
+                android:gravity="center"
+                android:text="Back"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

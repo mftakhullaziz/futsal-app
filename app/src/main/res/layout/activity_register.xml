@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_second"
+    android:fitsSystemWindows="true"
+    tools:context=".Authentikasi.RegisterActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:elevation="20dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_layout2" >
+
+            <TextView
+                android:id="@+id/title_daftar_akun"
+                android:layout_gravity="center"
+                style="@style/text_view_style"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/open_sans"
+                android:text="Silahkan daftar akun anda"
+                android:textSize="20dp"
+                android:gravity="center"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userPhoto"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/useradd"
+                app:civ_border_width="1dp"
+                app:civ_border_color="#FFF"/>
+
+
+            <EditText
+                android:id="@+id/nama_daftar"
+                style="@style/edit_text_style"
+                android:fontFamily="@font/open_sans"
+                android:drawableLeft="@drawable/ic_person"
+                android:drawablePadding="10dp"
+                android:textSize="14dp"
+                android:drawableStart="@drawable/ic_person"
+                android:hint="nama lengkap"
+                android:textColor="#727272"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/email_daftar"
+                style="@style/edit_text_style"
+                android:textSize="14dp"
+                android:fontFamily="@font/open_sans"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/ic_email"
+                android:hint="email"
+                android:textColor="#727272"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/password_daftar"
+                style="@style/edit_text_style"
+                android:textSize="14dp"
+                android:fontFamily="@font/open_sans"
+                android:drawableLeft="@drawable/ic_password"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/ic_password"
+                android:hint="password ( minimal 6 karakter )"
+                android:textColor="#727272"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/no_hp"
+                style="@style/edit_text_style"
+                android:textSize="14dp"
+                android:drawableLeft="@drawable/ic_phone"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/open_sans"
+                android:drawableStart="@drawable/ic_phone"
+                android:hint="nomor telepon"
+                android:textColor="#727272"
+                android:inputType="phone" />
+
+            <Button
+                android:id="@+id/button_Daftar"
+                style="@style/button_style_bg"
+                android:text="Register"
+                android:textSize="18sp"
+                android:fontFamily="@font/open_sans" />
+
+            <TextView
+                android:id="@+id/sudah_punya_akun"
+                style="@style/text_view_style"
+                android:text="Sudah Punya Akun ? Silahkan Masuk"
+                android:textSize="13sp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:focusable="true"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:fontFamily="@font/open_sans"
+                android:clickable="true"
+                android:onClick="toLogin"/>
+
+
+            <TextView
+                android:id="@+id/kembali"
+                style="@style/text_view_style"
+                android:gravity="center"
+                android:layout_marginTop="25dp"
+                android:onClick="kembali"
+                android:textSize="12dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:focusable="true"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Kembali" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
