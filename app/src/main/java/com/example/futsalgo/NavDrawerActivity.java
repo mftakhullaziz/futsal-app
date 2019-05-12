@@ -96,10 +96,10 @@ public class NavDrawerActivity extends AppCompatActivity
         Glide.with(this).load(user.getPhotoUrl()).into(nav_photo);
 
         navigationView.setNavigationItemSelectedListener(this);
-
+/*
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu_white_24dp);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu_white_24dp);*/
 
     }
 
@@ -150,7 +150,7 @@ public class NavDrawerActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home){
-            getSupportActionBar().setTitle(R.string.toolbar_title_home);
+            getSupportActionBar().setTitle(R.string.app_name);
             item.setChecked(true);
             getSupportFragmentManager().beginTransaction().replace(R.id.container, new Home_Fragment()).commit();
 

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutUsActivity">
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="0dp"
+        android:layout_gravity="center_horizontal"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:background="@color/colorPrimary" >
+    </android.support.v7.widget.Toolbar>
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/layout1"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:text="Booking Futsal Apps"
+                android:textColor="@color/colorPrimaryDark"
+                android:textAlignment="viewStart"
+                android:textSize="25sp"
+                android:gravity="start" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:text="is a futsal field-based mobile booking application, this application aims to facilitate people who like sports futsal to be able to more easily check the field schedule and book a futsal field"
+                android:textAlignment="viewStart"
+                android:textSize="20sp"
+                android:fontFamily="@font/montserrat"
+                android:gravity="start" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:text="Realease at 12 Mei 2019"
+                android:textAlignment="viewStart"
+                android:gravity="start"
+                android:textSize="20sp"
+                android:fontFamily="@font/montserrat"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:text="Develop by : "
+                android:textAlignment="viewStart"
+                android:gravity="start"
+                android:textSize="15sp"
+                android:fontFamily="@font/montserrat"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:autoLink="email"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="Miftakhul Aziz and Rada Safta Fathona"
+                android:textAlignment="viewStart"
+                android:gravity="start"
+                android:textSize="15sp"
+                android:fontFamily="@font/montserrat"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:text="Version Beta"
+                android:textAlignment="viewStart"
+                android:gravity="start"
+                android:textSize="20sp"
+                android:fontFamily="@font/montserrat"/>
+
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

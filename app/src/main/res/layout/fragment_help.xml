@@ -5,10 +5,100 @@
     android:layout_height="match_parent"
     tools:context=".Fragments_Menu.Help_Fragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/help_fragment" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:text="Hi User"
+                android:textColor="@color/colorPrimaryDark"
+                android:textAlignment="viewStart"
+                android:textSize="25sp"
+                android:gravity="start" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:text="Is there anything we can help ?"
+                android:textAlignment="viewStart"
+                android:textSize="25sp"
+                android:gravity="start" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat"
+                android:text="No need to hesitate to contact us every time you find it difficult to use this application. we will be ready to help you and find a way out."
+                android:textAlignment="viewStart"
+                android:gravity="start"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:text="You can contact us via : "
+                android:textAlignment="viewStart"
+                android:gravity="start"
+                android:textSize="20sp"
+                android:fontFamily="@font/montserrat"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:text="Email Help and Support"
+                android:textAlignment="viewStart"
+                android:gravity="start"
+                android:textSize="15sp"
+                android:fontFamily="@font/montserrat"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:autoLink="email"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="azizmiftakhul19@gmail.com or rada354@gmail.com"
+                android:textAlignment="viewStart"
+                android:gravity="start"
+                android:textSize="15sp"
+                android:fontFamily="@font/montserrat"/>
+
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
 
 </FrameLayout>

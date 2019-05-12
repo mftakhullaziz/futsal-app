@@ -8,6 +8,9 @@ public class Upload {
     private String nomor_tlp_lapangan;
     private String fasilitas_tersedia;
     private String alamat_lapangan;
+    private String nama_bank;
+    private String nomor_rekening;
+    private String nama_pemilik;
 
     private String lapangan_1;
     private String lapangan_2;
@@ -23,7 +26,8 @@ public class Upload {
     public Upload(String imgName, String imgUrl, String idAdministrator, String deskripsi_lapangan,
                   String nomor_tlp_lapangan, String fasilitas_tersedia, String alamat_lapangan,
                   String lapangan_1, String lapangan_2, String lapangan_3, String harga_lapangan_1,
-                  String harga_lapangan_2, String harga_lapangan_3) {
+                  String harga_lapangan_2, String harga_lapangan_3, String nama_bank, String nomor_rekening,
+                  String nama_pemilik) {
         if(imgName.trim().equals(""))
         {
             imgName="No name";
@@ -35,6 +39,8 @@ public class Upload {
         this.nomor_tlp_lapangan = nomor_tlp_lapangan;
         this.fasilitas_tersedia = fasilitas_tersedia;
         this.alamat_lapangan = alamat_lapangan;
+        this.nama_pemilik = nama_pemilik;
+
 
         this.lapangan_1 = lapangan_1;
         this.lapangan_2 = lapangan_2;
@@ -44,6 +50,8 @@ public class Upload {
         this.harga_lapangan_2 = harga_lapangan_2;
         this.harga_lapangan_3 = harga_lapangan_3;
 
+        this.nama_bank = nama_bank;
+        this.nomor_rekening = nomor_rekening;
     }
 
     public String getImgName() {
@@ -148,5 +156,29 @@ public class Upload {
 
     public void setHarga_lapangan_3(String harga_lapangan_3) {
         this.harga_lapangan_3 = harga_lapangan_3;
+    }
+
+    public String getNama_bank() {
+        return nama_bank;
+    }
+
+    public void setNama_bank(String nama_bank) {
+        this.nama_bank = nama_bank;
+    }
+
+    public String getNomor_rekening() {
+        return nomor_rekening;
+    }
+
+    public void setNomor_rekening(String nomor_rekening) {
+        this.nomor_rekening = nomor_rekening;
+    }
+
+    public String getNama_pemilik() {
+        return nama_pemilik;
+    }
+
+    public void setNama_pemilik(String nama_pemilik) {
+        this.nama_pemilik = nama_pemilik;
     }
 }

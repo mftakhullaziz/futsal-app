@@ -20,218 +20,249 @@
 
 
 
-    <LinearLayout
-        android:id="@+id/layout2"
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_below="@+id/toolbar"
-        android:layout_marginLeft="15dp"
-        android:background="#F0F0F0"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="5dp"
-        android:orientation="vertical">
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="5dp"
-            android:paddingLeft="15dp"
-            android:text="Form Data Pemesan"
-            android:background="@drawable/bg_bgtest"
-            android:textColor="#FFF"
-            android:gravity="center"
-            android:fontFamily="@font/open_sans"
-            android:textSize="20sp" />
+        android:layout_height="wrap_content">
 
         <LinearLayout
+            android:id="@+id/layout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="5dp">
-
-            <TextView
-                android:id="@+id/tvNamaPemesan"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:gravity="center"
-                android:textColor="@android:color/black"
-                android:text="Nama Pemesan"
-                android:fontFamily="@font/montserrat"
-                android:textSize="18sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/tvNomorTelepon"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:fontFamily="@font/montserrat"
-                android:textColor="@android:color/black"
-                android:text="Nomor Telepon"
-                android:textSize="18sp"
-                android:gravity="center"
-                />
-        </LinearLayout>
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginLeft="15dp"
+            android:background="#00F0F0F0"
+            android:layout_marginRight="15dp"
             android:layout_marginTop="5dp"
-            android:paddingLeft="15dp"
-            android:textColor="#FFF"
-            android:text="Tempat Futsal"
-            android:gravity="center"
-            android:fontFamily="@font/open_sans"
-            android:background="@drawable/bg_bgtest"
-            android:textSize="20sp" />
+            android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp">
 
             <TextView
-                android:id="@+id/tvTempatFutsal"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:textColor="@android:color/black"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="15dp"
+                android:text="Form Data Pemesan"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="#FFF"
+                android:gravity="center"
+                android:fontFamily="@font/open_sans"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/tvNamaPemesan"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:text="Nama Pemesan"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tvNomorTelepon"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@android:color/black"
+                    android:text="Nomor Telepon"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="15dp"
+                android:textColor="#FFF"
                 android:text="Tempat Futsal"
-                android:fontFamily="@font/montserrat"
-                android:gravity="center"
-                android:textSize="20sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="5dp">
-
-            <TextView
-                android:id="@+id/tvNamaLapanganUser"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:textColor="@android:color/black"
-                android:gravity="center"
-                android:fontFamily="@font/montserrat"
-                android:text="Nama Lapangan"
-                android:textSize="20sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="5dp">
-
-            <TextView
-                android:id="@+id/tvHargaLapanganUser"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:textColor="@android:color/black"
-                android:gravity="center"
-                android:fontFamily="@font/montserrat"
-                android:text="Harga Lapangan"
-                android:textSize="20sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="25dp"
-            android:weightSum="3">
-
-            <TextView
-                android:layout_width="133dp"
-                android:layout_height="match_parent"
-                android:text="Tanggal : "
                 android:gravity="center"
                 android:fontFamily="@font/open_sans"
+                android:background="@color/colorPrimaryDark"
                 android:textSize="20sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/open_sans"
-                android:gravity="center"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/tvTempatFutsal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textColor="@android:color/black"
+                    android:text="Tempat Futsal"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/tvNamaLapanganUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Nama Lapangan"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/tvHargaLapanganUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Harga Lapangan"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+          <!--  <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/cekNomorL"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Harga Lapangan"
+                    android:textSize="20sp" />
+
+            </LinearLayout>-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
                 android:layout_marginLeft="15dp"
-                android:text="Jam mulai :"
-                android:textAlignment="center"
-                android:textSize="20sp" />
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="25dp"
+                android:weightSum="3">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:entries="@array/selesai"
+                <TextView
+                    android:layout_width="133dp"
+                    android:layout_height="match_parent"
+                    android:text="Tanggal : "
+                    android:gravity="center"
+                    android:fontFamily="@font/open_sans"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/open_sans"
+                    android:gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:text="Jam mulai :"
+                    android:textAlignment="center"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:entries="@array/selesai"
+                    android:fontFamily="@font/open_sans"
+                    android:gravity="center|right"
+                    android:layout_marginLeft="18dp"
+                    android:text="Jam selesai :"
+                    android:textAlignment="center"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/tvTanggalPesan"
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:drawableLeft="@drawable/ic_date_range" />
+
+                <Spinner
+                    android:id="@+id/jamMulai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textAlignment="center" />
+
+                <Spinner
+                    android:id="@+id/jamSelesai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+
+
+
+            <Button
+                android:id="@+id/btnCek"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:textColor="#FFFFFF"
+                android:textSize="23sp"
                 android:fontFamily="@font/open_sans"
-                android:gravity="center|right"
-                android:layout_marginLeft="18dp"
-                android:text="Jam selesai :"
-                android:textAlignment="center"
-                android:textSize="20sp" />
+                android:layout_margin="10dp"
+                android:background="@drawable/button_style"
+                android:textAllCaps="false"
+                android:text="Cek Jadwal" />
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="5dp"
-            android:weightSum="3">
-
-            <TextView
-                android:id="@+id/tvTanggalPesan"
-                android:layout_width="75dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:textSize="15sp"
-                android:drawableLeft="@drawable/ic_date_range" />
-
-            <Spinner
-                android:id="@+id/jamMulai"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:textAlignment="center" />
-
-            <Spinner
-                android:id="@+id/jamSelesai"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:textAlignment="center" />
-
-        </LinearLayout>
 
 
 
 
-        <Button
-            android:id="@+id/btnCek"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:textColor="#FFFFFF"
-            android:textSize="23sp"
-            android:fontFamily="@font/open_sans"
-            android:layout_margin="10dp"
-            android:background="@drawable/button_style"
-            android:textAllCaps="false"
-            android:text="Cek Jadwal" />
+        </LinearLayout>
 
-    </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
 
     <LinearLayout
         android:id="@+id/linear_action"

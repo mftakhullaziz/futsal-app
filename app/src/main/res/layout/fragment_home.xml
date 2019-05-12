@@ -3,24 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_second"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments_Menu.Home_Fragment">
 
     <LinearLayout
         android:orientation="vertical"
-        android:background="@drawable/bg_second"
         android:weightSum="10"
+        android:background="@drawable/bg_m"
+        android:layout_marginTop="-80dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="640dp"
+            android:layout_height="740dp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/bg_layout2"
+            android:layout_marginTop="0dp"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -28,16 +29,17 @@
                 android:id="@+id/imageView"
                 android:layout_width="150dp"
                 android:layout_height="120dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="100dp"
                 app:srcCompat="@drawable/logo_aplikasi_y" />
 
             <GridLayout
                 android:id="@+id/mainGrid"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="8"
                 android:alignmentMode="alignMargins"
                 android:columnCount="2"
@@ -124,7 +126,7 @@
                             android:layout_gravity="center"
                             android:layout_marginTop="3dp"
                             android:fontFamily="@font/open_sans"
-                            android:text="Status Booking"
+                            android:text="List order"
                             android:textAlignment="center"
                             android:textColor="@android:color/black"
                             android:textSize="16sp" />
@@ -226,7 +228,7 @@
                 <!-- Row 3 -->
 
                 <!-- Column 1 -->
-                <android.support.v7.widget.CardView
+                <!--<android.support.v7.widget.CardView
                     android:id="@+id/card5"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -266,7 +268,7 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </android.support.v7.widget.CardView>-->
 
                 <!-- Column 2 -->
                 <android.support.v7.widget.CardView
@@ -302,7 +304,7 @@
                             android:layout_gravity="center"
                             android:layout_marginTop="3dp"
                             android:fontFamily="@font/open_sans"
-                            android:text="About Apps"
+                            android:text="About us"
                             android:textAlignment="center"
                             android:textColor="@android:color/black"
                             android:textSize="16sp" />
@@ -322,7 +324,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/open_sans"
-            android:text="Develop By DevCode Indonesia"
+            android:text="Booking Futsal Apps Version Beta"
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="20sp" />

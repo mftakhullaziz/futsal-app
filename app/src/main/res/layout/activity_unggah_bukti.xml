@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UnggahBuktiActivity">
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="0dp"
+            android:layout_gravity="center_horizontal"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:background="@color/colorPrimary" >
+        </android.support.v7.widget.Toolbar>
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout1">
+
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etNamaRekening"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:hint="Nama Rekening Pemesan"
+                android:fontFamily="@font/open_sans"
+                android:textColor="@color/colorPrimary"
+                android:textSize="23sp"
+                android:maxLines="1" />
+
+            <EditText
+                android:id="@+id/etNomorRekening"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:hint="Nomor Rekening Pemesan"
+                android:maxLines="1"
+                android:fontFamily="@font/open_sans"
+                android:textSize="23sp"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center"
+                android:text="Pembayaran"
+                android:textColor="@color/colorPrimaryDark"
+                android:fontFamily="@font/open_sans"
+                android:textSize="25sp" />
+
+            <RadioGroup
+                android:id="@+id/rgPembayaran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RadioButton
+                    android:id="@+id/rbLunas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="19sp"
+                    android:fontFamily="@font/open_sans"
+                    android:buttonTint="@color/colorAccent"
+                    android:text="Lunas"
+                    />
+
+                <RadioButton
+                    android:id="@+id/rbUangMuka"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="19sp"
+                    android:fontFamily="@font/open_sans"
+                    android:buttonTint="@color/colorAccent"
+                    android:text="Uang Muka" />
+            </RadioGroup>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans"
+                    android:text="Nominal Transfer"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textAlignment="viewStart"
+                    android:gravity="start"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/tvNominal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="-"
+                    android:fontFamily="@font/open_sans"
+                    android:textAlignment="viewEnd"
+                    android:gravity="end"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/pilihGambar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/colorPrimary"
+                android:text="Pilih Gambar"
+                android:textAllCaps="false"
+                android:fontFamily="@font/open_sans"
+                android:textSize="20sp"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:textColor="#FFF"/>
+
+            <Button
+                android:id="@+id/unggah"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPrimaryDark"
+                android:text="Unggah Bukti Pembayaran"
+                android:textColor="#FFF"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:textAllCaps="false"
+                android:fontFamily="@font/open_sans"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

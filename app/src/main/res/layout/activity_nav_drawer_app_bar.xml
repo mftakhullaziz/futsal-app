@@ -23,7 +23,7 @@
             android:elevation="0dp"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            android:background="@color/colorPrimary">
+            android:background="@color/colorPrimaryDark">
 
             <!--<TextView-->
             <!--android:layout_width="match_parent"-->

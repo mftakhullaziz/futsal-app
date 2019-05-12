@@ -3,6 +3,7 @@ package com.example.futsalgo;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -17,9 +18,11 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.futsalgo.MenuTempatFutsal.DetailTempatFutsalActivity;
 import com.example.futsalgo.Model.Pemesan;
+import com.example.futsalgo.Model.Pesanan;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -31,6 +34,7 @@ import com.squareup.picasso.Picasso;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Locale;
 
 public class BuatPesananActivity extends AppCompatActivity {
@@ -78,14 +82,8 @@ public class BuatPesananActivity extends AppCompatActivity {
     private TextView hargaLPA;
     private TextView tempatLPA;
 
-    private TextView tempatLPA2;
-    private TextView namaLPA2;
-    private TextView hargaLPA2;
-
-    private TextView namaLPA3;
-    private TextView hargaLPA3;
-
-
+    private TextView nomorKO;
+    private int totalPembayaran;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,6 +91,7 @@ public class BuatPesananActivity extends AppCompatActivity {
         setContentView(R.layout.activity_buat_pesanan);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitleTextAppearance(this, R.style.montserat);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Create Booking");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -117,12 +116,14 @@ public class BuatPesananActivity extends AppCompatActivity {
         namaLPA = findViewById(R.id.tvNamaLapanganUser);
         hargaLPA = findViewById(R.id.tvHargaLapanganUser);
 
-        tempatLPA2 = findViewById(R.id.tvTempatFutsal);
+ /*       tempatLPA2 = findViewById(R.id.tvTempatFutsal);
         namaLPA2 = findViewById(R.id.tvNamaLapanganUser);
         hargaLPA2 = findViewById(R.id.tvHargaLapanganUser);
 
         namaLPA3 = findViewById(R.id.tvNamaLapanganUser);
-        hargaLPA3 = findViewById(R.id.tvHargaLapanganUser);
+        hargaLPA3 = findViewById(R.id.tvHargaLapanganUser);*/
+
+       /* nomorKO = findViewById(R.id.cekNomorL);*/
 
 
         btnCekJadwal = findViewById(R.id.btnCek);
@@ -146,6 +147,7 @@ public class BuatPesananActivity extends AppCompatActivity {
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
 
         getDataPemesan();
+        buatInvoice();
         setSpinner();
         getDataLapangan();
 
@@ -168,17 +170,45 @@ public class BuatPesananActivity extends AppCompatActivity {
                 if (tgl == true && jam == true) {
                     cekJadwal();
                 }
-
-
             }
         });
 
         btnPembayaran.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                buatPesanan();
-                Intent intent = new Intent(BuatPesananActivity.this, RekeningTransferActivity.class);
-                startActivity(intent);
+
+                if (tgl == true && jam == true && jadwal == true) {
+
+                    buatPesanan();
+                    String namaInvoice = getIntent().getStringExtra("invoice");
+                    String namaTempatF = getIntent().getStringExtra("imgName");
+                    String namaLapanganF = getIntent().getStringExtra("lapangan_1");
+                    String namaBank = getIntent().getStringExtra("nama_bank");
+                    String noBanko = getIntent().getStringExtra("nomor_rekening");
+                    String namap = getIntent().getStringExtra("nama_pemilik");
+                    String harg = getIntent().getStringExtra("harga_lapangan_1");
+                    String tglpes = getIntent().getStringExtra("tanggalPesan");
+                    String jampes1 = getIntent().getStringExtra("jamMulai");
+                    String jampes2 = getIntent().getStringExtra("jamSelesai");
+                    Intent intent = new Intent(BuatPesananActivity.this, DetailPesananActivity.class);
+                    intent.putExtra("imgName", namaTempatF);
+                    intent.putExtra("lapangan_1", namaLapanganF);
+                    intent.putExtra("nama_bank", namaBank);
+                    intent.putExtra("nomor_rekening", noBanko);
+                    intent.putExtra("nama_pemilik", namap);
+                    intent.putExtra("harga_lapangan_1", harg);
+
+                    startActivity(intent);
+
+
+                }else {
+                    Toast.makeText(BuatPesananActivity.this, "Periksa Kembali Pesanan Anda",
+                            Toast.LENGTH_LONG).show();
+                }
+
+
+
+
             }
         });
 
@@ -189,6 +219,10 @@ public class BuatPesananActivity extends AppCompatActivity {
         String idLapangan = getIntent().getStringExtra("idLapangan");
         String emailTempatFutsal = getIntent().getStringExtra("email");*/
 
+        String a = getIntent().getStringExtra("nama_bank");
+        String b = getIntent().getStringExtra("nomor_rekening");
+        String c = getIntent().getStringExtra("nama_pemilik");
+
         String pemesan = namaPemesan.getText().toString();
         String noTelpon = nomorPemesan.getText().toString();
 
@@ -198,7 +232,13 @@ public class BuatPesananActivity extends AppCompatActivity {
         String tglPesan = tanggalPesan.getText().toString();
         String jamMulai = spinnerMulai.getSelectedItem().toString();
         String jamSelesai = spinnerSelesai.getSelectedItem().toString();
+
+        String AddressFuts = tempatLPA.getText().toString();
+        String NameFuts = namaLPA.getText().toString();
+        String Money = hargaLPA.getText().toString();
+
         String statusPesanan = "Belum Bayar";
+
         idPesanan = dbRef.push().getKey();
 
         calander = Calendar.getInstance();
@@ -207,9 +247,10 @@ public class BuatPesananActivity extends AppCompatActivity {
 
         dbRef = FirebaseDatabase.getInstance().getReference().child("pesanan").child(idPesanan);
         dbRef.child("idPesanan").setValue(idPesanan);
-        /*dbRef.child("idPetugas").setValue(idPetugas);
-        dbRef.child("idPemesan").setValue(idPemesan);
-        dbRef.child("idLapangan").setValue(idLapangan);*/
+        dbRef.child("idPengguna").setValue(IDPengguna);
+        dbRef.child("nameTempatFuts").setValue(AddressFuts);
+        dbRef.child("nameLapanganFuts").setValue(NameFuts);
+        dbRef.child("hargaLapanganFuts").setValue(Money);
         dbRef.child("statusPesanan").setValue(statusPesanan);
         dbRef.child("namaPemesan").setValue(pemesan);
 
@@ -223,22 +264,32 @@ public class BuatPesananActivity extends AppCompatActivity {
         dbRef.child("jamMulai").setValue(jamMulai);
         dbRef.child("jamSelesai").setValue(jamSelesai);
 
-        /*dbRef.child("totalPembayaran").setValue(totalPembayaran());*/
+        dbRef.child("totalPembayaran").setValue(totalPembayaran());
         dbRef.child("invoice").setValue(invoice);
         dbRef.child("timestamp").setValue(timestamp);
+
+        dbRef.child("transfer_ke_bank").setValue(a);
+        dbRef.child("transfer_ke_no_rekening").setValue(b);
+        dbRef.child("transfer_ke_nama_pemilik").setValue(c);
 
         /*dbRef.child("emailTempatFutsal").setValue(emailTempatFutsal);*/
     }
 
-  /*  private int totalPembayaran() {
-        Integer hargaSewa = getIntent().getIntExtra("hargaSewa", 0);
+    private int totalPembayaran() {
+
+        /*Integer hargaSewa1 = getIntent().getIntExtra("harga_lapangan_1", 0);*/
+        String hargaT = getIntent().getExtras().getString("harga_lapangan_1");
+        int hargaSewa = Integer.parseInt(String.valueOf(hargaT));
+
         int jamMulai = Integer.parseInt(String.valueOf(spinnerMulai.getSelectedItem()));
         int jamSelesai = Integer.parseInt(String.valueOf(spinnerSelesai.getSelectedItem()));
         int durasi = jamSelesai - jamMulai;
-        *//*int total = durasi * hargaSewa;*//*
-    *//*    totalPembayaran = total;
-        return totalPembayaran;*//*
-    }*/
+        int total = durasi * hargaSewa;
+
+        totalPembayaran = total;
+
+        return totalPembayaran;
+    }
 
 
     private boolean cekJadwal() {
@@ -334,7 +385,10 @@ public class BuatPesananActivity extends AppCompatActivity {
         namaLPA.setText(namaT);
 
         String hargaT = getIntent().getExtras().getString("harga_lapangan_1");
-        hargaLPA.setText("Rp. "+hargaT);
+        hargaLPA.setText(hargaT);
+
+       /* String hargaTNo = getIntent().getExtras().getString("nomor_rekening");
+        nomorKO.setText("no. "+hargaTNo);*/
 
         /*String namaS2 = getIntent().getExtras().getString("imgName");
         tempatLPA2.setText(namaS2);
@@ -455,7 +509,7 @@ public class BuatPesananActivity extends AppCompatActivity {
         calander = Calendar.getInstance();
         simpledateformat = new SimpleDateFormat("ddMMyyyyHHmm");
         Date = simpledateformat.format(calander.getTime());
-        invoice = ("FNINVC" + Date);
+        invoice = ("LPGFUTSAL" + Date);
     }
 
 

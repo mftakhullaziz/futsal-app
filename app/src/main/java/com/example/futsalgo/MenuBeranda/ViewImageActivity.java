@@ -44,6 +44,7 @@ public class ViewImageActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        toolbar.setTitleTextAppearance(this, R.style.montserat);
         getSupportActionBar().setTitle("Indoor Stadium Futsal");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);

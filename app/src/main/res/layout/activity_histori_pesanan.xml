@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HistoriPesananActivity">
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="0dp"
+            android:layout_gravity="center_horizontal"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:background="@color/colorPrimary" >
+
+        </android.support.v7.widget.Toolbar>
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout1"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp">
+
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout1"
+            android:background="#FFF"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="9dp"
+                android:background="@color/colorPrimaryDark" />
+
+            <!--
+                        <TextView
+                            android:id="@+id/tvInvoice"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Invoice"
+                            android:fontFamily="@font/open_sans"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="25sp" />-->
+
+            <!--
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/open_sans"
+                            android:text="Status Pesanan"
+                            android:textSize="18sp" /-->>
+
+            <!-- <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginBottom="5dp"
+                 android:layout_marginLeft="15dp"
+                 android:layout_marginRight="15dp"
+                 android:layout_marginTop="5dp"
+                 android:weightSum="1">
+
+                 <TextView
+                     android:id="@+id/tvStatus"
+                     android:layout_width="match_parent"
+                     android:layout_height="50dp"
+                     android:text="status"
+                     android:gravity="center"
+                     android:textColor="#000"
+                     android:textSize="20sp"
+                     android:fontFamily="@font/open_sans"/>
+             </LinearLayout>-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Kode Booking"
+                android:fontFamily="@font/open_sans"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tvinvoice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="2"
+                    android:text="in"
+                    android:gravity="center"
+                    android:fontFamily="@font/open_sans"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Status Pesanan"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="status"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:fontFamily="@font/open_sans" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Pemesan"
+                android:fontFamily="@font/open_sans"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tvNamaPemesan1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nama Pemesan"
+                    android:textAlignment="viewStart"
+                    android:fontFamily="@font/open_sans"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:gravity="start" />
+
+                <TextView
+                    android:id="@+id/tvNomorPemesan1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nomor Telepon"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/open_sans"
+                    android:gravity="end" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Tempat Futsal"
+                android:fontFamily="@font/open_sans"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tvNamaTempatFutsal1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nama Tempat Futsal"
+                    android:textAlignment="viewStart"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/open_sans"
+                    android:gravity="start" />
+
+                <TextView
+                    android:id="@+id/tvNamaLapangan1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Lapangan"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/open_sans"
+                    android:gravity="end" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/open_sans"
+                android:text="Tanggal Pesan"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tvTanggalPesan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Tanggal"
+                    android:textAlignment="viewStart"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/open_sans"
+                    android:gravity="start" />
+
+                <TextView
+                    android:id="@+id/tvDurasi1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="jam pesan"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/open_sans"
+                    android:gravity="end" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/open_sans"
+                android:text="Total Pembayaran"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tvTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="2"
+                    android:text="Nominal"
+                    android:gravity="center"
+                    android:fontFamily="@font/open_sans"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:text="Catatan : "
+                android:textAlignment="viewStart"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                android:gravity="start" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat"
+                android:text="Pemesan WAJIB melakukan pembayaran sebelum waktu yang telah ditentukan berakhir (2 jam)."
+                android:textAlignment="viewStart"
+                android:gravity="start"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:text="Pemesan WAJIB membayar Uang Muka minimal sebesar 50% dari Total Pembayaran."
+                android:textAlignment="viewStart"
+                android:gravity="start"
+                android:textSize="12sp"
+                android:fontFamily="@font/montserrat"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:text="Untuk pembayaran silahkan transfer ke nomor rekening dibawah ini dan unggah bukti pembayaran."
+                android:textAlignment="viewStart"
+                android:gravity="start"
+                android:textSize="12sp"
+                android:fontFamily="@font/montserrat"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Transfer ke : "
+                android:fontFamily="@font/open_sans"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Bank"
+                    android:fontFamily="@font/open_sans"
+                    android:textAlignment="viewStart"
+                    android:gravity="start"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvNamaBank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nama Bank"
+                    android:textAlignment="viewEnd"
+                    android:gravity="end"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/open_sans"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nomor Rekening"
+                    android:textAlignment="viewStart"
+                    android:gravity="start"
+                    android:fontFamily="@font/open_sans"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvNomorRekeningP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nomor"
+                    android:textAlignment="viewEnd"
+                    android:gravity="end"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/open_sans"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans"
+                    android:text="Nama Rekening"
+                    android:textAlignment="viewStart"
+                    android:gravity="start"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvNamaRekeningP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nama"
+                    android:textAlignment="viewEnd"
+                    android:gravity="end"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/open_sans"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/btnUnggahBukti"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/open_sans"
+                    android:background="@color/colorPrimary"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:text="Unggah Bukti Pembayaran"
+                    android:textColor="#FFF" />
+
+                <Button
+                    android:id="@+id/btnBeriUlasan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:fontFamily="@font/open_sans"
+                    android:background="@color/colorPrimary"
+                    android:text="Beri Ulasan"
+                    android:textColor="#FFF" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

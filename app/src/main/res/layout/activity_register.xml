@@ -29,8 +29,8 @@
                 android:layout_gravity="center"
                 style="@style/text_view_style"
                 android:layout_marginTop="30dp"
-                android:fontFamily="@font/open_sans"
-                android:text="Silahkan daftar akun anda"
+                android:fontFamily="@font/montserrat"
+                android:text="Register your account"
                 android:textSize="20dp"
                 android:gravity="center"/>
 
@@ -54,7 +54,7 @@
                 android:drawablePadding="10dp"
                 android:textSize="14dp"
                 android:drawableStart="@drawable/ic_person"
-                android:hint="nama lengkap"
+                android:hint="full name"
                 android:textColor="#727272"
                 android:inputType="textPersonName" />
 
@@ -66,7 +66,7 @@
                 android:drawableLeft="@drawable/ic_email"
                 android:drawablePadding="10dp"
                 android:drawableStart="@drawable/ic_email"
-                android:hint="email"
+                android:hint="email addres"
                 android:textColor="#727272"
                 android:inputType="textEmailAddress" />
 
@@ -78,7 +78,7 @@
                 android:drawableLeft="@drawable/ic_password"
                 android:drawablePadding="10dp"
                 android:drawableStart="@drawable/ic_password"
-                android:hint="password ( minimal 6 karakter )"
+                android:hint="minimum of 6 characters"
                 android:textColor="#727272"
                 android:inputType="textPassword" />
 
@@ -90,7 +90,7 @@
                 android:drawablePadding="10dp"
                 android:fontFamily="@font/open_sans"
                 android:drawableStart="@drawable/ic_phone"
-                android:hint="nomor telepon"
+                android:hint="nomor telephone"
                 android:textColor="#727272"
                 android:inputType="phone" />
 
@@ -104,7 +104,7 @@
             <TextView
                 android:id="@+id/sudah_punya_akun"
                 style="@style/text_view_style"
-                android:text="Sudah Punya Akun ? Silahkan Masuk"
+                android:text="Have account? Please Login"
                 android:textSize="13sp"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:focusable="true"
@@ -121,14 +121,14 @@
                 android:gravity="center"
                 android:layout_marginTop="25dp"
                 android:onClick="kembali"
-                android:textSize="12dp"
+                android:textSize="18dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:focusable="true"
                 android:clickable="true"
                 android:layout_gravity="center"
                 android:layout_marginBottom="20dp"
                 android:fontFamily="@font/montserrat"
-                android:text="Kembali" />
+                android:text="Back" />
 
         </LinearLayout>
     </ScrollView>

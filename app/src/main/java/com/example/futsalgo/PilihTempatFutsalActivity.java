@@ -56,7 +56,8 @@ public class PilihTempatFutsalActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Pilih Booking Lapangan Futsal");
+        toolbar.setTitleTextAppearance(this, R.style.montserat);
+        getSupportActionBar().setTitle("Select Futsal Court");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 

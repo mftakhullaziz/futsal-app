@@ -4,15 +4,17 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.CalendarContract;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.GridView;
 
+import com.example.futsalgo.AboutUsActivity;
+import com.example.futsalgo.DaftarPesananActivity;
+import com.example.futsalgo.LihatUlasanActivity;
+import com.example.futsalgo.Maps.MapsActivity;
 import com.example.futsalgo.MenuBeranda.ViewImageActivity;
 import com.example.futsalgo.R;
 
@@ -69,8 +71,8 @@ public class Home_Fragment extends Fragment {
         StatusBooking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*Intent start1 = new Intent(getActivity(), BerandaActivity.class);
-                startActivity(start1);*/
+                Intent start2 = new Intent(getActivity(), DaftarPesananActivity.class);
+                startActivity(start2);
             }
         });
 
@@ -78,8 +80,8 @@ public class Home_Fragment extends Fragment {
         Location.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*Intent start1 = new Intent(getActivity(), BerandaActivity.class);
-                startActivity(start1);*/
+                Intent start3 = new Intent(getActivity(), MapsActivity.class);
+                startActivity(start3);
             }
         });
 
@@ -87,26 +89,26 @@ public class Home_Fragment extends Fragment {
         Reviews.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*Intent start1 = new Intent(getActivity(), BerandaActivity.class);
-                startActivity(start1);*/
+                Intent start4 = new Intent(getActivity(), LihatUlasanActivity.class);
+                startActivity(start4);
             }
         });
 
-        CardView kalenders=rootV.findViewById(R.id.card5);
+       /* CardView kalenders=rootV.findViewById(R.id.card5);
         kalenders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*Intent start1 = new Intent(getActivity(), BerandaActivity.class);
-                startActivity(start1);*/
+                *//*Intent start1 = new Intent(getActivity(), BerandaActivity.class);
+                startActivity(start1);*//*
             }
-        });
+        });*/
 
         CardView About=rootV.findViewById(R.id.card6);
         About.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*Intent start1 = new Intent(getActivity(), BerandaActivity.class);
-                startActivity(start1);*/
+                Intent start5 = new Intent(getActivity(), AboutUsActivity.class);
+                startActivity(start5);
             }
         });
 
@@ -140,4 +142,5 @@ public class Home_Fragment extends Fragment {
     public interface OnFragmentInteractionListener {
         void onFragmentInteraction(Uri uri);
     }
+
 }

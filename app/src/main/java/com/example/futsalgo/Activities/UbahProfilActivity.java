@@ -91,6 +91,8 @@ public class UbahProfilActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 simpanData();
+                Toast.makeText(UbahProfilActivity.this, "Profile Berhasil di Perbaharui",
+                        Toast.LENGTH_LONG).show();
             }
         });
 

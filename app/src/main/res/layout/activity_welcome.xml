@@ -9,48 +9,56 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     tools:context=".WelcomeActivity">
 
-    <LinearLayout
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/view1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="futsal union application"
-        android:fontFamily="@font/montserrat"
-        android:layout_marginTop="80dp"
-        android:textColor="#00897B"
-        android:textSize="50sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/view2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat"
-        android:text="Now Booking Futsal Stadium Easily and Anytime"
-        android:textColor="#FFF"
-        android:textSize="60sp"/>
+            <TextView
+                android:id="@+id/view1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="futsal union application"
+                android:fontFamily="@font/montserrat"
+                android:layout_marginTop="80dp"
+                android:textColor="#00897B"
+                android:textSize="50sp"/>
 
-    <Button
-        android:id="@+id/Masuk_login"
-        style="@style/button_style_bg"
-        android:fontFamily="@font/open_sans"
-        android:layout_height="60dp"
-        android:textSize="23sp"
-        android:text="Login" />
+            <TextView
+                android:id="@+id/view2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="Now Booking Futsal Stadium Easily and Anytime"
+                android:textColor="#FFF"
+                android:textSize="60sp"/>
 
-     <Button
-         android:id="@+id/Masuk_daftar"
-         style="@style/button_style_bg1"
-         android:fontFamily="@font/open_sans"
-         android:layout_height="60dp"
-         android:textSize="23sp"
-         android:text="Create Account" />
+            <Button
+                android:id="@+id/Masuk_login"
+                style="@style/button_style_bg"
+                android:fontFamily="@font/open_sans"
+                android:layout_height="60dp"
+                android:textSize="23sp"
+                android:text="Login" />
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/Masuk_daftar"
+                style="@style/button_style_bg1"
+                android:fontFamily="@font/open_sans"
+                android:layout_height="60dp"
+                android:textSize="23sp"
+                android:text="Create Account" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
 
 </RelativeLayout>

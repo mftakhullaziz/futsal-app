@@ -55,6 +55,10 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
                 intent.putExtra("fasilitas_tersedia",mUploads.get(i).getFasilitas_tersedia());
                 intent.putExtra("alamat_lapangan",mUploads.get(i).getAlamat_lapangan());
 
+                intent.putExtra("nama_bank",mUploads.get(i).getNama_bank());
+                intent.putExtra("nomor_rekening",mUploads.get(i).getNomor_rekening());
+                intent.putExtra("nama_pemilik",mUploads.get(i).getNama_pemilik());
+
                 intent.putExtra("lapangan_1",mUploads.get(i).getLapangan_1());
                 intent.putExtra("lapangan_2",mUploads.get(i).getLapangan_2());
                 intent.putExtra("lapangan_3",mUploads.get(i).getLapangan_3());

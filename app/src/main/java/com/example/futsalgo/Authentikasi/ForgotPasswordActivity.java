@@ -14,6 +14,7 @@ import android.widget.Toast;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
 
+import com.example.futsalgo.DialogActivity;
 import com.example.futsalgo.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -25,6 +26,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
     private EditText inputEmail;
     private Button btnReset;
     private FirebaseAuth auth;
+    private DialogActivity.p_dialog object;
 
 
     @Override
@@ -97,15 +99,14 @@ public class ForgotPasswordActivity extends AppCompatActivity {
 
     public void loginKembali(View view) {
         //animate DialogActivity progress
-//        progress_dialog object=new progress_dialog(this);
-//        object.show();
-
+        object = new DialogActivity.p_dialog(this);
+        object.show();
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-
                 startActivity(new Intent(ForgotPasswordActivity.this, LoginActivity.class));
                 finish();
+                object.dismiss();
             }
         },3000);
 

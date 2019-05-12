@@ -9,10 +9,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/cardView1"
         android:background="#FFF"
-        app:cardElevation="50dp"
+        app:cardElevation="8dp"
         app:cardCornerRadius="0dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginTop="8dp">
 
         <LinearLayout
@@ -39,13 +37,10 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="0dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginLeft="8dp"
             android:layout_marginBottom="20dp"
             android:gravity="center"
-            android:fontFamily="@font/montserrat"
-            android:background="@drawable/bg_bgtest"
+            android:fontFamily="@font/open_sans"
+            android:background="@color/colorPrimaryDark"
             android:text="Image Caption/Description"
             android:textColor="#FDFDFE"
             android:textSize="25sp" />

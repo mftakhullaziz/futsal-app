@@ -4,7 +4,7 @@
     android:id="@+id/headerView"
     android:layout_width="match_parent"
     android:layout_height="220dp"
-    android:background="@drawable/material_background"
+    android:background="@drawable/bg_bgtest"
     android:gravity="center"
     android:orientation="vertical"
     android:paddingLeft="16dp"

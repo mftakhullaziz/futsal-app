@@ -23,6 +23,7 @@ import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.futsalgo.DialogActivity;
 import com.example.futsalgo.R;
 import com.example.futsalgo.WelcomeActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -47,6 +48,7 @@ public class RegisterActivity extends AppCompatActivity {
     private Button btnSignUp;
     private ProgressDialog mProgress;
     private DatabaseReference dbRef;
+    private DialogActivity.p_dialog object;
 
     ImageView imgUserPhoto;
     static int PReqCode = 1;
@@ -62,7 +64,7 @@ public class RegisterActivity extends AppCompatActivity {
         //Start Inisialisasi Firebase
 
         auth = FirebaseAuth.getInstance();
-        dbRef = FirebaseDatabase.getInstance().getReference("pemesan");
+        dbRef = FirebaseDatabase.getInstance().getReference("pengguna");
         dbRef.keepSynced(true);
 
         mProgress = new ProgressDialog(this);
@@ -87,20 +89,35 @@ public class RegisterActivity extends AppCompatActivity {
                 String telepon = inputNoTelepon.getText().toString().trim();
 
 
-                if (email.isEmpty()) {
+
+
+                if (password.isEmpty() && nama.isEmpty() && email.isEmpty() && telepon.isEmpty()){
+                    inputNama.setError("please input name !");
                     inputEmail.setError("please input email !");
-                    Toast.makeText(getApplicationContext(), "please input email !", Toast.LENGTH_SHORT).show();
-                }
-
-                if (password.isEmpty()) {
                     inputPassword.setError("please input password !");
-                    Toast.makeText(getApplicationContext(), "please input password !", Toast.LENGTH_SHORT).show();
+                    inputNoTelepon.setError("please input no telephone !");
+                    Toast.makeText(getApplicationContext(), "Please input field !", Toast.LENGTH_SHORT).show();
+                    return;
+                } else {
+                    if (email.isEmpty()) {
+                        inputEmail.setError("please input email !");
+                        Toast.makeText(getApplicationContext(), "please input email !", Toast.LENGTH_SHORT).show();
+                        return;
+                    } else if (password.isEmpty()) {
+                        inputPassword.setError("please input password !");
+                        Toast.makeText(getApplicationContext(), "please input password !", Toast.LENGTH_SHORT).show();
+                        return;
+                    } else {
+                        if (password.length() < 6) {
+                            Toast.makeText(getApplicationContext(), "Password is too short, enter at least 6 characters!", Toast.LENGTH_SHORT).show();
+                            return;
+                        }
+                    }
+
                 }
 
-                    if (password.length() < 6 ){
-                        Toast.makeText(getApplicationContext(), "Password terlalu pendek, masukkan minimal 6 karakter!", Toast.LENGTH_SHORT).show();
-                        return;
-                    }
+
+
 
                 mProgress.show();
 
@@ -111,12 +128,15 @@ public class RegisterActivity extends AppCompatActivity {
                         if (!task.isSuccessful()) {
                             showDialog();
                         } else {
-                            startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+                          /*  startActivity(new Intent(RegisterActivity.this, LoginActivity.class));*/
                             simpanData();
                             UpdateUserInfo(nama, pickimgURI, auth.getCurrentUser());
-                            Toast.makeText(RegisterActivity.this, "Daftar Berhasil", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this, "Register successful, please login !", Toast.LENGTH_SHORT).show();
                             mProgress.dismiss();
-                            finish();
+                            inputNama.setText("");
+                            inputEmail.setText("");
+                            inputPassword.setText("");
+                            inputNoTelepon.setText("");
                         }
                     }
                 });
@@ -201,9 +221,9 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void showDialog() {
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setTitle("Pemberitahuan")
+        alert.setTitle("Notification")
                 .setCancelable(true)
-                .setMessage("Daftar Gagal")
+                .setMessage("Register failed")
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -245,27 +265,35 @@ public class RegisterActivity extends AppCompatActivity {
     public void toLogin(View view) {
         /*progress_dialog object=new progress_dialog(this);
         object.show();*/
+        object = new DialogActivity.p_dialog(this);
+        object.show();
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
 
                 startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+                object.dismiss();
                 finish();
+
             }
         },3000);
+
     }
 
     public void kembali(View view) {
       /*progress_dialog object=new progress_dialog(this);
         object.show();*/
-
+        object = new DialogActivity.p_dialog(this);
+        object.show();
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
 
                 startActivity(new Intent(RegisterActivity.this, WelcomeActivity.class));
+                object.dismiss();
                 finish();
+
             }
         },3000);
 

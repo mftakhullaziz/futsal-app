@@ -12,15 +12,15 @@
         <item
             android:id="@+id/nav_profil"
             android:icon="@drawable/ic_account"
-            android:title="Profil" />
+            android:title="Profile" />
         <item
             android:id="@+id/nav_help"
             android:icon="@drawable/ic_help"
-            android:title="Pusat Bantuan" />
+            android:title="Help and Support" />
         <item
             android:id="@+id/nav_signout"
             android:icon="@drawable/ic_cancel"
-            android:title="Keluar" />
+            android:title="Log Out" />
 </group>
 
 </menu>

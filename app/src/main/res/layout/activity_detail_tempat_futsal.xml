@@ -14,7 +14,7 @@
         android:layout_gravity="center_horizontal"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        android:background="@drawable/bg_bgtest" >
+        android:background="@color/colorPrimaryDark" >
 
     </android.support.v7.widget.Toolbar>
 
@@ -37,7 +37,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_bgtest"
+                android:background="#D9616161"
                 android:orientation="vertical">
 
 
@@ -66,6 +66,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
                     android:fontFamily="@font/open_sans"
                     android:gravity="center"
                     android:elevation="50dp"
@@ -81,14 +82,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/bg_bgtest"
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
-                        android:layout_marginBottom="5dp"
-                        android:background="@drawable/bg_label"
+                        android:background="@color/colorPrimaryDark"
                         android:fontFamily="@font/open_sans"
                         android:gravity="center"
                         android:text="About us"
@@ -102,7 +101,6 @@
                         android:gravity="center"
                         android:overScrollMode="ifContentScrolls"
                         android:paddingBottom="5dp"
-                        android:layout_marginBottom="10dp"
                         android:background="@drawable/bg_text_daftar_lapangan_futsal"
                         android:paddingLeft="10dp"
                         android:fontFamily="@font/open_sans"
@@ -113,10 +111,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"
                         android:layout_gravity="center"
-                        android:background="@drawable/bg_label"
+                        android:background="@color/colorPrimaryDark"
                         android:fontFamily="@font/open_sans"
                         android:gravity="center"
                         android:text="Contact"
@@ -126,7 +122,6 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:layout_marginBottom="10dp"
                         android:background="@drawable/bg_text_daftar_lapangan_futsal"
                         android:orientation="horizontal">
 
@@ -156,26 +151,23 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
-                        android:background="@drawable/bg_label"
+                        android:background="@color/colorPrimaryDark"
                         android:gravity="center"
                         android:paddingBottom="5dp"
                         android:paddingLeft="10dp"
                         android:paddingTop="5dp"
-                        android:layout_marginBottom="5dp"
                         android:text="Improvements"
                         android:textColor="#FFF"
                         android:fontFamily="@font/open_sans"
                         android:textSize="22dp" />
 
-
                     <TextView
                         android:id="@+id/tvFas"
                         android:layout_width="match_parent"
-                        android:layout_height="140dp"
+                        android:layout_height="150dp"
                         android:gravity="center"
                         android:overScrollMode="ifContentScrolls"
                         android:paddingBottom="5dp"
-                        android:layout_marginBottom="10dp"
                         android:background="@drawable/bg_text_daftar_lapangan_futsal"
                         android:paddingLeft="10dp"
                         android:fontFamily="@font/open_sans"
@@ -186,12 +178,11 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
-                        android:background="@drawable/bg_label"
+                        android:background="@color/colorPrimaryDark"
                         android:gravity="center"
                         android:paddingBottom="5dp"
                         android:paddingLeft="10dp"
                         android:paddingTop="5dp"
-                        android:layout_marginBottom="5dp"
                         android:text="Address"
                         android:textColor="#FFF"
                         android:fontFamily="@font/open_sans"
@@ -205,7 +196,6 @@
                         android:gravity="center"
                         android:overScrollMode="ifContentScrolls"
                         android:paddingBottom="5dp"
-                        android:layout_marginBottom="10dp"
                         android:background="@drawable/bg_text_daftar_lapangan_futsal"
                         android:paddingLeft="10dp"
                         android:fontFamily="@font/open_sans"
@@ -226,12 +216,11 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
-                        android:background="@drawable/bg_label"
+                        android:background="@color/colorPrimaryDark"
                         android:gravity="center"
                         android:paddingBottom="5dp"
                         android:paddingLeft="10dp"
                         android:paddingTop="5dp"
-                        android:layout_marginBottom="10dp"
                         android:text="List Indoor Stadium"
                         android:textColor="#FFF"
                         android:fontFamily="@font/open_sans"
@@ -248,12 +237,12 @@
                             android:gravity="center"
                             android:overScrollMode="ifContentScrolls"
                             android:paddingBottom="5dp"
-                            android:background="@color/colorPrimary"
                             android:paddingLeft="10dp"
                             android:fontFamily="@font/open_sans"
                             android:paddingTop="5dp"
+                            android:background="#FFF"
                             android:text="Lapangan 1"
-                            android:textColor="#FFF"
+                            android:textColor="#AD000000"
                             android:textSize="18sp" />
                         <TextView
                             android:id="@+id/tvHarga1"
@@ -262,7 +251,6 @@
                             android:gravity="center"
                             android:overScrollMode="ifContentScrolls"
                             android:paddingBottom="5dp"
-                            android:layout_marginBottom="10dp"
                             android:background="@drawable/bg_text_daftar_lapangan_futsal"
                             android:paddingLeft="10dp"
                             android:fontFamily="@font/open_sans"
@@ -345,6 +333,83 @@
                     </LinearLayout>-->
 
 
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:text="Information Payment"
+                        android:textColor="#FFF"
+                        android:fontFamily="@font/open_sans"
+                        android:textSize="22dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tvNote"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:gravity="center"
+                            android:overScrollMode="ifContentScrolls"
+                            android:paddingBottom="5dp"
+                            android:background="@color/colorPrimary"
+                            android:paddingLeft="10dp"
+                            android:fontFamily="@font/open_sans"
+                            android:paddingTop="5dp"
+                            android:text="note : you must tranfers payment after booking indoor stadium futsal"
+                            android:textColor="#FFF"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tvNBank"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:gravity="center"
+                            android:overScrollMode="ifContentScrolls"
+                            android:paddingBottom="5dp"
+                            android:background="@drawable/bg_text_daftar_lapangan_futsal"
+                            android:paddingLeft="10dp"
+                            android:fontFamily="@font/open_sans"
+                            android:paddingTop="5dp"
+                            android:text="nama rek"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tvNoBank"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:gravity="center"
+                            android:overScrollMode="ifContentScrolls"
+                            android:paddingBottom="5dp"
+                            android:background="@drawable/bg_text_daftar_lapangan_futsal"
+                            android:paddingLeft="10dp"
+                            android:fontFamily="@font/open_sans"
+                            android:paddingTop="5dp"
+                            android:text="nomor rek"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tvNOwner"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:gravity="center"
+                            android:overScrollMode="ifContentScrolls"
+                            android:paddingBottom="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/bg_text_daftar_lapangan_futsal"
+                            android:paddingLeft="10dp"
+                            android:fontFamily="@font/open_sans"
+                            android:paddingTop="5dp"
+                            android:text="name pemilik"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+
 
 
 
@@ -353,14 +418,14 @@
                         android:id="@+id/bookingLPG"
                         android:textAllCaps="false"
                         android:layout_width="match_parent"
-                        android:layout_height="70dp"
+                        android:layout_height="75dp"
                         android:fontFamily="@font/open_sans"
                         android:textSize="23sp"
                         android:textColor="#FFF"
                         android:layout_marginRight="20dp"
                         android:layout_marginLeft="20dp"
-                        android:text="Booking Indoor Stadium"
-                        android:layout_marginBottom="30dp"
+                        android:text="Booking field"
+                        android:layout_marginBottom="10dp"
                         android:background="@drawable/button_style"/>
 
                     <!--<TextView

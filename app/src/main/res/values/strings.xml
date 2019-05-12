@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Futsal Union And United</string>
+    <string name="app_name">Booking Futsal Apps</string>
     <string name="title_activity_nav_drawer_class">Home</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -11,9 +11,9 @@
     <string name="auth_failed">authentication failed, check your email and password or sign up</string>
 
     <!-- Toolbar titles -->
-    <string name="toolbar_title_home">Futsal Union And United</string>
-    <string name="toolbar_title_profil">User Homepage</string>
-    <string name="toolbar_title_help_and_feedback">Help And Support</string>
+    <!--<string name="toolbar_title_home">Futsal Union And United</string>-->
+    <string name="toolbar_title_profil">user profile</string>
+    <string name="toolbar_title_help_and_feedback">help and support</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="home_fragment">Home fragment</string>
@@ -65,4 +65,5 @@
         <item>23</item>
         <item>24</item>
     </integer-array>
+    <string name="title_activity_maps">Map</string>
 </resources>
